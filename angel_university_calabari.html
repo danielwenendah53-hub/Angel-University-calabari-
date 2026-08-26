@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Angel University Calabari - University website prototype">
+  <title>Angel University Calabari</title>
+  <style>
+    :root{--primary:#123b68;--secondary:#e9b949;--light:#f5f8fc;--dark:#102238;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#25364a;background:#fff}
+    header{background:var(--primary);color:white;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px #0002}
+    .nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:1.15rem;font-weight:800;display:flex;align-items:center;gap:10px}
+    .logo{width:42px;height:42px;border-radius:50%;background:var(--secondary);color:var(--primary);display:grid;place-items:center;font-weight:900}
+    nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--secondary)}
+    .hero{background:linear-gradient(135deg,#123b68ee,#0c2444ee),url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=80') center/cover;min-height:72vh;display:grid;place-items:center;color:white;text-align:center;padding:80px 20px}
+    .hero-inner{max-width:850px}
+    .hero h1{font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.05;margin-bottom:20px}
+    .hero p{font-size:1.15rem;max-width:700px;margin:0 auto 28px}
+    .btn{display:inline-block;background:var(--secondary);color:#102238;text-decoration:none;padding:13px 22px;border-radius:7px;font-weight:800;margin:5px}
+    .btn.alt{background:white;color:var(--primary)}
+    section{padding:70px 20px}
+    .container{max-width:1100px;margin:auto}
+    .section-title{text-align:center;color:var(--primary);font-size:2rem;margin-bottom:12px}
+    .section-lead{text-align:center;max-width:750px;margin:0 auto 38px;color:#5b6b7c}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .about img{width:100%;border-radius:14px;box-shadow:0 8px 30px #0002}
+    .about h3{color:var(--primary);margin-bottom:12px;font-size:1.5rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;padding:25px;border-radius:12px;box-shadow:0 5px 22px #00000012;border:1px solid #e5ebf2}
+    .card h3{color:var(--primary);margin-bottom:8px}
+    .courses{background:var(--light)}
+    .admission{background:var(--primary);color:white}
+    .admission .section-title{color:white}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{background:white;color:#25364a;padding:22px;border-radius:10px}
+    .number{width:38px;height:38px;background:var(--secondary);border-radius:50%;display:grid;place-items:center;font-weight:900;margin-bottom:12px}
+    .notice{margin-top:28px;background:#fff3cd;color:#5f4b16;padding:15px;border-radius:8px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    form{display:grid;gap:12px}
+    input,textarea{width:100%;padding:13px;border:1px solid #ccd5df;border-radius:7px;font:inherit}
+    textarea{min-height:140px;resize:vertical}
+    button{border:0;cursor:pointer;font:inherit}
+    footer{background:var(--dark);color:#dce7f2;text-align:center;padding:30px 20px}
+    .small{font-size:.9rem;color:#789}
+    @media(max-width:800px){
+      nav{display:none}
+      .about,.contact-grid{grid-template-columns:1fr}
+      .cards,.steps{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:520px){.cards,.steps{grid-template-columns:1fr}.hero{min-height:65vh}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><div class="logo">AU</div> Angel University Calabari</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#admission">Admission</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <h1>Angel University Calabari</h1>
+      <p>Inspiring knowledge, character, innovation and leadership for a brighter future.</p>
+      <a class="btn" href="#admission">Admission Information</a>
+      <a class="btn alt" href="#courses">Explore Courses</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Welcome to Angel University Calabari</h2>
+      <p class="section-lead">A simple website prototype designed to present the university, its academic programmes, admission information and contact details.</p>
+      <div class="about">
+        <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1200&q=80" alt="University campus">
+        <div>
+          <h3>Education for Excellence</h3>
+          <p>Angel University Calabari is presented here as an institution committed to providing a supportive learning environment where students can develop academic knowledge, practical skills, confidence and responsible leadership.</p>
+          <p style="margin-top:12px">Our goal is to encourage students to discover their potential and prepare for meaningful careers and service to society.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses" id="courses">
+    <div class="container">
+      <h2 class="section-title">Courses & Programmes</h2>
+      <p class="section-lead">The list below is sample website content. Replace it with the university's officially approved programmes before publishing.</p>
+      <div class="cards">
+        <div class="card"><h3>Computer Science</h3><p>Study computing, software development, information systems and digital technologies.</p></div>
+        <div class="card"><h3>Business Administration</h3><p>Develop knowledge in management, entrepreneurship, finance and organisational leadership.</p></div>
+        <div class="card"><h3>Accounting</h3><p>Build skills in financial reporting, auditing, taxation and business decision-making.</p></div>
+        <div class="card"><h3>Political Science</h3><p>Explore government, public policy, political institutions and international relations.</p></div>
+        <div class="card"><h3>English & Communication</h3><p>Develop communication, writing, language and analytical skills.</p></div>
+        <div class="card"><h3>Social Sciences</h3><p>Explore human society, communities, institutions and social development.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="admission" id="admission">
+    <div class="container">
+      <h2 class="section-title">Admission Information</h2>
+      <p class="section-lead" style="color:#dce7f2">Use this section to provide applicants with the official admission process and requirements.</p>
+      <div class="steps">
+        <div class="step"><div class="number">1</div><h3>Choose a Programme</h3><p>Select the programme you wish to study after checking the official requirements.</p></div>
+        <div class="step"><div class="number">2</div><h3>Prepare Documents</h3><p>Prepare your academic results, identification and any other required documents.</p></div>
+        <div class="step"><div class="number">3</div><h3>Apply</h3><p>Complete the official application process and submit the required information.</p></div>
+        <div class="step"><div class="number">4</div><h3>Admission</h3><p>Follow the official instructions for screening, acceptance, registration and payment.</p></div>
+      </div>
+      <div class="notice"><strong>Important:</strong> Admission requirements, fees, deadlines and accreditation details should be replaced with verified official information before this website is used publicly.</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-lead">Replace the placeholder contact information below with the university's official details.</p>
+      <div class="contact-grid">
+        <div>
+          <h3 style="color:#123b68;margin-bottom:15px">Get in Touch</h3>
+          <p><strong>Location:</strong> Calabari, Rivers State, Nigeria</p>
+          <p><strong>Phone:</strong> +234 XXX XXX XXXX</p>
+          <p><strong>Email:</strong> info@example.edu.ng</p>
+          <p><strong>Office Hours:</strong> Monday–Friday, 8:00 AM–4:00 PM</p>
+          <p class="small" style="margin-top:18px">These are placeholders and should be replaced with verified official contact details.</p>
+        </div>
+        <form onsubmit="sendMessage(event)">
+          <input id="name" type="text" placeholder="Your name" required>
+          <input id="email" type="email" placeholder="Your email" required>
+          <textarea id="message" placeholder="Your message" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Angel University Calabari. Website prototype.</p>
+  <p style="margin-top:6px">Replace all placeholder information with verified official details before publication.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function sendMessage(event){
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    alert("Thank you, " + name + "! Your message form is working as a demo. Connect it to an email/form service to receive real messages.");
+  }
+</script>
+</body>
+</html>
